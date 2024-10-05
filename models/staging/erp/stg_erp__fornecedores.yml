@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_erp__fornecedores
+    description: Tabela de dimensão dos fornecedores.
+    columns:
+      - name: pk_fornecedor
+        description: Chave primária do fornecedor.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: nome_fornecedor
+        description: Nome da empresa fornecedora.
+
+      - name: cidade_fornecedor
+        description: Cidade do fornecedor.
+
+      - name: pais_fornecedor
+        description: País do fornecedor.

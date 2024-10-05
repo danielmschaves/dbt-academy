@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_erp__transportadoras
+    description: Tabela de dimensão das transportadoras.
+    columns:
+      - name: pk_transportadora
+        description: Chave primária da transportadora.
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: nm_transportadora
+        description: Nome da empresa transportadora.

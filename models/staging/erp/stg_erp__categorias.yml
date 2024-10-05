@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: stg_erp__categorias
+    description: Tabela de dimensão das categorias de produtos.
+    columns:
+      - name: pk_categoria
+        description: Chave primária da categoria.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: nome_categoria
+        description: Nome da categoria.
+
+      - name: descricao_categoria
+        description: Descrição da categoria.

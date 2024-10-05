@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: stg_erp__clientes
+    description: Tabela de dimensão dos clientes.
+    columns:
+      - name: pk_cliente
+        description: Chave primária do cliente.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: nm_empresa_cliente
+        description: Nome da empresa cliente.
+
+      - name: cidade_cliente
+        description: Cidade do cliente.
+
+      - name: regiao_cliente
+        description: Região do cliente.
+
+      - name: pais_cliente
+        description: País do cliente.

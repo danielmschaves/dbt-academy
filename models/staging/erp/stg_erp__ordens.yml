@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_erp__pedidos
+    description: Tabela de fatos dos pedidos.
+    columns:
+      - name: pk_pedido
+        description: Chave primária do pedido.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: fk_funcionario
+        description: Chave estrangeira do funcionário.
+
+      - name: fk_cliente
+        description: Chave estrangeira do cliente.
+
+      - name: fk_transportadora
+        description: Chave estrangeira da transportadora.
+
+      - name: numero_pedido
+        description: Número do pedido.
+
+      - name: data_do_pedido
+        description: Data em que o pedido foi realizado.
+
+      - name: data_do_envio
+        description: Data em que o pedido foi enviado.
+
+      - name: data_requerida_entrega
+        description: Data requerida para a entrega do pedido.
+
+      - name: frete
+        description: Valor do frete do pedido.
+
+      - name: nm_destinatario
+        description: Nome do destinatário do pedido.
+
+      - name: cidade_destinatario
+        description: Cidade do destinatário do pedido.
+
+      - name: regiao_destinatario
+        description: Região do destinatário do pedido.
+
+      - name: pais_destinatario
+        description: País do destinatário do pedido.
