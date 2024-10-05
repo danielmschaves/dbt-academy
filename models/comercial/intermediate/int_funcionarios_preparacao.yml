@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: int_funcionarios_preparacao
+    description: Tabela intermediária para designar o gerente do funcionário.
+    columns:
+      - name: PK_FUNCIONARIO
+        description: Chave primária que identifica exclusivamente cada funcionário.
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: NOME_FUNCIONARIO
+        description: Nome completo do funcionário.
+        
+      - name: NOME_GERENTE
+        description: Nome completo do gerente do funcionário.
+        
+      - name: CARGO_FUNCIONARIO
+        description: Cargo do funcionário.
+        
+      - name: DT_NASCIMENTO_FUNCIONARIO
+        description: Data de nascimento do funcionário.
+        
+      - name: DT_CONTRATACAO
+        description: Data de contratação do funcionário.
+        
+      - name: CIDADE_FUNCIONARIO
+        description: Cidade do funcionário.
+        
+      - name: REGIAO_FUNCIONARIO
+        description: Região do funcionário.
+        
+      - name: PAIS_FUNCIONARIO
+        description: País do funcionário.

@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_erp__funcionarios
+    description: Tabela intermediária para designar o gerente do funcionário e preparar dados para análise.
+    columns:
+      - name: PK_FUNCIONARIO
+        description: Chave primária que identifica exclusivamente cada funcionário.
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: FK_GERENTE
+        description: Chave estrangeira que referencia o gerente do funcionário (se houver).
+        
+      - name: NOME_FUNCIONARIO
+        description: Nome completo do funcionário.
+      
+      - name: NOME_GERENTE
+        description: Nome completo do gerente do funcionário (se aplicável).
+        
+      - name: CARGO_FUNCIONARIO
+        description: Cargo ou título do funcionário na empresa.
+        
+      - name: DT_NASCIMENTO_FUNCIONARIO
+        description: Data de nascimento do funcionário.
+        
+      - name: DT_CONTRATACAO
+        description: Data em que o funcionário foi contratado pela empresa.
+        
+      - name: CIDADE_FUNCIONARIO
+        description: Cidade onde o funcionário está baseado ou reside.
+        
+      - name: REGIAO_FUNCIONARIO
+        description: Região ou estado onde o funcionário está localizado.
+        
+      - name: PAIS_FUNCIONARIO
+        description: País onde o funcionário está baseado ou reside.
