@@ -1,11 +1,26 @@
 version: 2
 
 models:
-  - name: stg_erp__pedido_itens
-    description: Tabela de preparação dos dados brutos da funcionários.
+  - name: stg_erp__pedidos_itens
+    description: Tabela de fatos dos itens de pedidos.
     columns:
       - name: pk_pedido_item
-        description: Chave primária da tabela pedido itens.
+        description: Chave primária composta do item de pedido.
         data_tests:
           - unique
-          - not_null           
+          - not_null
+
+      - name: fk_pedido
+        description: Chave estrangeira do pedido.
+
+      - name: fk_produto
+        description: Chave estrangeira do produto.
+
+      - name: desconto_perc
+        description: Percentual de desconto aplicado ao item.
+
+      - name: preco_da_unidade
+        description: Preço unitário do item.
+
+      - name: quantidade
+        description: Quantidade do item no pedido.

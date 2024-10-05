@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_erp__produtos
+    description: Tabela de dimensão dos produtos.
+    columns:
+      - name: pk_produto
+        description: Chave primária do produto.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: fk_fornecedor
+        description: Chave estrangeira do fornecedor.
+
+      - name: fk_categoria
+        description: Chave estrangeira da categoria.
+
+      - name: nm_produto
+        description: Nome do produto.
+
+      - name: quantidade_por_unidade
+        description: Quantidade por unidade do produto.
+
+      - name: preco_por_unidade
+        description: Preço por unidade do produto.
+
+      - name: unidade_em_estoque
+        description: Quantidade de unidades em estoque.
+
+      - name: unidade_por_pedido
+        description: Quantidade de unidades por pedido.
+
+      - name: nivel_de_pedido
+        description: Nível de pedido do produto.
+
+      - name: eh_discontinuado
+        description: Indica se o produto foi descontinuado.
