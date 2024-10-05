@@ -7,9 +7,16 @@ sources:
     schema: raw_northwind 
     tables:
       - name: employee
-        descriptions: Tabela fonte com informações dos funcionários da Northwind.
+        description: Tabela fonte com informações dos funcionários da Northwind.
         columns: 
           - name: id
             data_tests:
               - unique
               - not_null
+      - name: product
+      - name: category
+      - name: _order_
+      - name: orderdetail
+      - name: customer
+      - name: shipper
+      - name: supplier
