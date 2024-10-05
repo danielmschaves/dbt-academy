@@ -5,7 +5,7 @@ models:
     description: Tabela de intermediário para enriquecer os dados da dimensão produto.
     columns:
       - name: PK_PRODUTO
-        description: blablabla.
+        description: Testes na primary key.
         data_tests:
           - unique
           - not_null
