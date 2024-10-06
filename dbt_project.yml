@@ -45,6 +45,7 @@ models:
 
       marts:
         +schema: marts
+        +schema_override: marts
 
     staging:
       +materialized: view
