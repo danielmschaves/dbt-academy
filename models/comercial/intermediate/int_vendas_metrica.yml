@@ -2,10 +2,67 @@ version: 2
 
 models:
   - name: int_vendas_metricas
-    description: Tabela de intermediário com as métricas de venda da Northwind.
+    description: Tabela intermediária com as métricas de venda da Northwind.
     columns:
       - name: pk_pedido_item
-        description: Testes na primary key.
+        description: Chave primária composta do item de pedido.
         data_tests:
           - unique
           - not_null
+
+      - name: FK_PRODUTO
+        description: Chave estrangeira do produto.
+
+      - name: FK_FUNCIONARIO
+        description: Chave estrangeira do funcionário.
+
+      - name: FK_CLIENTE
+        description: Chave estrangeira do cliente.
+
+      - name: FK_TRANSPORTADORA
+        description: Chave estrangeira da transportadora.
+
+      - name: DATA_DO_PEDIDO
+        description: Data em que o pedido foi realizado.
+
+      - name: DATA_DO_ENVIO
+        description: Data em que o pedido foi enviado.
+
+      - name: DATA_REQUERIDA_ENTREGA
+        description: Data requerida para a entrega do pedido.
+
+      - name: DESCONTO_PERC
+        description: Percentual de desconto aplicado ao item.
+
+      - name: PRECO_DA_UNIDADE
+        description: Preço unitário do item.
+
+      - name: QUANTIDADE
+        description: Quantidade do item no pedido.
+
+      - name: VALOR_BRUTO
+        description: Valor bruto do item (quantidade * preço da unidade).
+
+      - name: VALOR_LIQUIDO
+        description: Valor líquido do item (valor bruto - desconto).
+
+      - name: frete_rateado
+        description: Valor do frete rateado por item do pedido.
+
+      - name: NUMERO_PEDIDO
+        description: Número do pedido.
+
+      - name: NM_DESTINATARIO
+        description: Nome do destinatário do pedido.
+
+      - name: CIDADE_DESTINATARIO
+        description: Cidade do destinatário do pedido.
+
+      - name: REGIAO_DESTINATARIO
+        description: Região do destinatário do pedido.
+
+      - name: PAIS_DESTINATARIO
+        description: País do destinatário do pedido.
+
+      - name: TEVE_DESCONTO
+        description: Indica se o item teve desconto aplicado.
